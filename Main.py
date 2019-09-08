@@ -17,4 +17,4 @@ stateList = circuit.run(states)
 for i in range(0, len(stateList)):
     inputStates = stateList[i]
     for j in range(0, len(inputStates)):
-        print(inputStates[j].getVector())
+        print(inputStates[j])

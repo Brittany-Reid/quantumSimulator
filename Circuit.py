@@ -241,7 +241,7 @@ class Circuit:
             if(noOp == True): continue
 
             state = self.processStep(i, state)
-            states.append(state)
+            states.append(state.getVector())
 
         #return the list of states at each step    
         return states

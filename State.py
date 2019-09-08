@@ -6,6 +6,10 @@ class State:
     vector = None
     qubits = 0
 
+    #given a string representation of qubits, will construct a state object
+    def __init__(self, string, qubits):
+        self.vector = self.constructVector(string, qubits)
+
     #given a character representing a bit, returns the vector
     def constructBits(self, char):
         bitv = list()
@@ -42,10 +46,6 @@ class State:
 
         #the final v is returned
         return v
-
-    #given a string representation of qubits, will construct a state object
-    def __init__(self, string, qubits):
-        self.vector = self.constructVector(string, qubits)
 
     def transform(self, mat):
         self.vector = self.vector.dot(mat)
